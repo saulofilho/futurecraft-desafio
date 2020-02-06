@@ -1,3 +1,4 @@
+<!--
 <h1 align="center">
     <img alt="React RocketShoes" src="https://res.cloudinary.com/lukemorales/image/upload/v1562696000/readme_logos/react-rocketshoes_jy1lze.png" />
     <br>
@@ -92,3 +93,4 @@ Made with ♥ by Luke Morales :wave: [Get in touch!](https://www.linkedin.com/in
 [vc]: https://code.visualstudio.com/
 [vceditconfig]: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
 [vceslint]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+-->
