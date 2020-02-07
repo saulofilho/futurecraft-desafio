@@ -27,5 +27,8 @@
     "dev": "echo 'Starting Webpack dev server!\n' && webpack-dev-server --mode=development",
     "sass": "sass --watch src:public/style",
     "build": "webpack --mode=production"
+  },
+  "dependencies": {
+    "aos": "^3.0.0-beta.6"
   }
 }
