@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./style/index.css" />
   <link rel="shortcut icon" href="./assets/a.jpg" type="image/jpg" />
   <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/53f27d6075.js" crossorigin="anonymous"></script>
   <title>Futurecraft FW16 </title>
 </head>
 
@@ -33,14 +34,15 @@
       </div>
       <div class="search-right">
         <form action="">
-          <input type="search" />
-          <i>icon</i>
+          <input type="text" placeholder="procurar" />
+          <i class="fas fa-shopping-bag"></i>
         </form>
       </div>
     </div>
   </header>
   <div id="root">
-    <section class="one">
+    <!-- section on -->
+    <section class="one" id="section-one">
       <div class="one-bg"></div>
       <div class="one-shoe"></div>
       <div class="one-txt">
@@ -51,47 +53,63 @@
         <p>feito para ser refeito</p>
       </div>
     </section>
-    <section class="two">
-      <div class="btn-circle">
-        <button>
-          <i>icon</i>
-        </button>
-      </div>
-      <div class="container wrapper-two">
-        <div class="txt-left">
-          <p class="title">design <br /> sem lixo</p>
-          <p class="txt">
-            Um tênis. Uma matéria prima. Feito para ser
-            <br />
-            refeito sem perder a performance. Quando uma
-            <br />
-            coisa se transforma em outra, caminhamos em
-            <br />
-            direção a um futuro cíclico e o fim da poluição do
-            <br />
-            plástico.
-          </p>
+    <!-- section on -->
+    <!-- section two -->
+    <section class="two" id="section-two">
+      <div class="container-small">
+        <div>
+          <a href="#section-two">
+            <div class="btn-circle">
+                <i class="fas fa-arrow-down"></i>
+            </div>
+          </a>
         </div>
-        <div class="img-right">
-          <img src="https://adidas-desafio.s3-sa-east-1.amazonaws.com/2.jpg" alt="" />
+        <div class="wrapper-two">
+          <div class="txt-left">
+            <p class="title">design <br /> sem lixo</p>
+            <p class="txt">
+              Um tênis. Uma matéria prima. Feito para ser
+              <br />
+              refeito sem perder a performance. Quando uma
+              <br />
+              coisa se transforma em outra, caminhamos em
+              <br />
+              direção a um futuro cíclico e o fim da poluição do
+              <br />
+              plástico.
+            </p>
+          </div>
+          <div class="img-right">
+            <img src="https://adidas-desafio.s3-sa-east-1.amazonaws.com/2.jpg" alt="" />
+          </div>
         </div>
-      </div>
-      <div class="btn-como-funciona">
-        <button>veja como funciona</button>
+        <div class="btn-como-funciona">
+          <a href="#section-three">
+            <div class="btn-circle-small">
+                <i class="fas fa-arrow-down"></i>
+            </div>
+            <p>veja como funciona</p>
+          </a>
+        </div>
       </div>
     </section>
-    <section class="three">
-      <div class="txt-three">
-        <p>gen 1</p>
-        <p>o primeiro e único</p>
-        <p>feito de tpu 100% reciclável</p>
+    <!-- section two -->
+    <!-- section three -->
+    <section class="three" id="section-three">
+      <div class="container-small">
+        <div class="txt-three">
+          <p>gen 1</p>
+          <p>o primeiro e único</p>
+          <p>feito de tpu 100% <br /> reciclável</p>
+        </div>
       </div>
       <div class="carousel">
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
+        <img src="https://adidas-desafio.s3-sa-east-1.amazonaws.com/c1.jpg" alt="" />
+        <img src="https://adidas-desafio.s3-sa-east-1.amazonaws.com/c2.jpg" alt="" />
+        <img src="https://adidas-desafio.s3-sa-east-1.amazonaws.com/c3.jpg" alt="" />
       </div>
     </section>
+    <!-- section three -->
   </div>
   <script src="bundle.js"></script>
 </body>

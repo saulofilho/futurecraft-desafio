@@ -1,19 +1,25 @@
-/* @import "./primitive.css"; */
-
 *,
 *::before,
 *::after
   box-sizing: border-box
   margin: 0
   padding: 0
+
+html
   font-family: "Helvetica Neue", sans-serif
+  scroll-behavior: smooth
 
 .container
   max-width: 1200px
   margin: 0 auto
 
+.container-small
+  max-width: 900px
+  margin: 0 auto
+
 .menu-left
   color: white
+  float: left
 
 .row
   display: flex
@@ -30,12 +36,36 @@ header
   position: relative
   height: 80px
 
+.fa-shopping-bag
+  color: white
+  font-size: 24px
+  padding-left: 10px
+
 ul
   list-style-type: none
   overflow: hidden
 
+ul li:nth-child(3):after
+  content: " "
+  border-right: 1px solid gray
+  height: 10px
+  position: relative
+  top: -62px
+  left: 0
+
+ul li:nth-child(5):after
+  content: " "
+  border-right: 1px solid gray
+  height: 10px
+  position: relative
+  top: -62px
+  left: 0
+
 li
   float: left
+
+ul li a:hover
+  color: gray
 
 li a
   display: block
@@ -56,18 +86,23 @@ li a
 .logo
   width: 100%
   max-width: 100px
+  margin-left: 30px
 
 .search-right
   float: right
-  margin: -60px 20px
+
+.search-right form
+  margin-right: 70px
 
 input
   width: 160px
-  height: 60px
+  height: 32px
+  margin-top: 40px
 
+/* one */
 .one
   width: 100%
-  height: calc(95vh - 80px)
+  height: calc(88vh - 80px)
   display: flex
   -webkit-box-align: center
   align-items: center
@@ -89,9 +124,9 @@ input
 
 .one-shoe
   position: relative
-  top: 0
+  top: -20px
   left: 0
-  height: 300px
+  height: 430px
   width: 60vw
   background-image: url("https://adidas-desafio.s3-sa-east-1.amazonaws.com/1.jpg")
   background-size: cover
@@ -99,9 +134,9 @@ input
 
 .one-txt
   position: absolute
-  top: 0
+  top: 100px
   left: 0
-  width: 100vw
+  width: 98vw
   height: 100%
 
 .one-txt p
@@ -112,44 +147,98 @@ input
   text-transform: uppercase
   -webkit-text-stroke: 2px #2d3d7d
   color: transparent
-  animation: fontMove 10s linear infinite
+  line-height: 140px
+  //animation: fontMove 10s linear infinite
 
+/* section two */
 .two
   background-color: #f3f1f1
   position: relative
-  height: 1200px
+  height: 700px
   padding-top: 250px
+  width: 100%
 
 .wrapper-two
-  display: flex
+  display: inherit
+  width: 100%
+  height: 100%
 
 .btn-circle
-  width: 8rem
-  height: 8rem
+  width: 7rem
+  height: 7rem
   position: absolute
-  left: 10rem
-  top: -60px
+  top: -40px
   background: #2d3d7d
   border-radius: 50%
   display: flex
   align-items: center
   justify-content: center
+  cursor: pointer
+
+.btn-como-funciona
+  position: absolute
+  top: 525px
+  display: flex
+  justify-content: center
+
+.btn-como-funciona a
+  display: flex
+  width: 100%
+  text-decoration: none
+  text-transform: uppercase
+  color: #2d3d7d
+  font-size: 11px
+  align-items: center
+
+.btn-como-funciona a p
+  padding-left: 30px
+  transition: transform 0.1s ease-in
+
+.btn-como-funciona a p:hover
+  transform: translate(10px, 0px)
+
+.btn-circle-small
+  width: 2.5rem
+  height: 2.5rem
+  background: transparent
+  border: 1px solid #2d3d7d
+  border-radius: 50%
+  display: flex
+  align-items: center
+  justify-content: center
+  cursor: pointer
+
+.btn-circle-small .fa-arrow-down
+  font-size: 12px
+  color: #2d3d7d
+
+.fa-arrow-down
+  color: white
+  font-size: 24px
+  font-weight: 300
+  transition: transform 0.2s ease-in
+
+.fa-arrow-down:hover
+  transform: translate(0px, 10px)
+
+.txt-left
+  float: left
 
 .txt-left .title
   text-transform: uppercase
-  font-size: 36px
+  font-size: 2rem
   font-weight: 600
   line-height: 35px
   color: #696969
 
 .txt-left .txt
   font-family: 'Muli', sans-serif
-  font-size: 18px
+  font-size: 1rem
   line-height: 25px
   color: #747474
   margin-top: 20px
   border-bottom: 1px solid #cbcbcb
-  width: 26rem
+  width: 23rem
   padding-bottom: 35px
 
 .img-right
@@ -157,22 +246,67 @@ input
   width: 440px
   height: 440px
   overflow: hidden
+  float: right
 
 .img-right img
   width: 100%
 
+/* section three */
 .three
   position: relative
-  padding-top: 7rem
+  width: 100%
+  height: 1200px
+  overflow: hidden
+  padding-top: 100px
+  background-color: #f3f1f1
+
+.carousel
+  position: absolute
+  top: 225px
+  width: 100%
+
+.carousel img
+  width: 100%
 
 .txt-three
   color: #747474
-  top: 19rem
-  left: 24rem
-  position: absolute
+  top: -130px
+  position: relative
+  overflow: hidden
+  height: 100%
+  width: 100%
+  z-index: 1
 
 .txt-three p:nth-child(1)
-  font-size: 40px
+  font-size: 10px
+  font-weight: 600
+  font-size: 8rem
+  white-space: nowrap
+  overflow: hidden
+  text-transform: uppercase
+  color: #747474
+  padding-top: 58px
+
+.txt-three p:nth-child(2)
+  font-size: 10px
+  font-weight: 600
+  font-size: 8rem
+  white-space: nowrap
+  overflow: hidden
+  text-transform: uppercase
+  -webkit-text-stroke: 2px #747474
+  color: transparent
+  margin-top: -40px
+
+.txt-three p:nth-child(3)
+  font-size: 10px
+  font-weight: 300
+  font-size: 1rem
+  white-space: nowrap
+  overflow: hidden
+  text-transform: uppercase
+  color: #747474
+  margin-top: 60px
 
 @keyframes fontMove
   from
