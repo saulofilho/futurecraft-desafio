@@ -2,6 +2,10 @@ import movingTxt from "./movingTxt";
 import AOS from "aos";
 import mySwiper from "./mySwiper";
 import menuMob from "./menuMob";
+import circleStroke from "./circleStroke";
+
+// circle button stroke
+circleStroke();
 
 // menu mob
 menuMob();

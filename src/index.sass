@@ -133,10 +133,20 @@ li a
 .search-right form
   margin-right: 70px
 
-input
+input[type=text]
   width: 160px
   height: 32px
   margin-top: 40px
+  background-image: url("https://cursorcss.s3-sa-east-1.amazonaws.com/_ionicons_svg_md-search.svg")
+  background-repeat: no-repeat
+  padding: 10px 20px 10px 35px
+  -webkit-transition: width 0.4s ease-in-out
+  transition: width 0.4s ease-in-out
+
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus
+  width: 220px
 
 /* one */
 .one
@@ -187,7 +197,8 @@ input
   text-transform: uppercase
   -webkit-text-stroke: 3px white
   color: transparent
-  line-height: 140px
+  line-height: calc(20vh - 1rem)
+
 
 .marquee,
 .mov-left
@@ -224,9 +235,8 @@ input
 
 .btn-como-funciona
   position: absolute
-  top: 525px
-  display: flex
-  justify-content: center
+  top: 490px
+  margin-left: -20px
 
 .btn-como-funciona a
   display: flex
@@ -238,22 +248,31 @@ input
   align-items: center
 
 .btn-como-funciona a p
-  padding-left: 30px
   transition: transform 0.1s ease-in
 
 .btn-como-funciona a p:hover
   transform: translate(10px, 0px)
 
-.btn-circle-small
-  width: 2.5rem
-  height: 2.5rem
-  background: transparent
-  border: 1px solid #2d3d7d
-  border-radius: 50%
-  display: flex
-  align-items: center
-  justify-content: center
-  cursor: pointer
+.x
+  fill: transparent
+  stroke: #cbcbcb
+
+.symbol
+  fill: transparent
+  stroke: #2d3d7d
+  stroke-width: 1.2px
+  stroke-dasharray: 1600
+  stroke-miterlimit: 10
+  stroke-dashoffset: 1600
+  transition: all 4s linear
+
+@keyframes paint
+  to
+    stroke-dashoffset: 0
+
+@keyframes wipe
+  to
+    stroke-dashoffset: -1600
 
 .btn-circle-small .fa-arrow-down
   font-size: 12px
@@ -264,6 +283,9 @@ input
   font-size: 24px
   font-weight: 300
   transition: transform 0.2s ease-in
+  position: absolute
+  top: 45px
+  left: 45px
 
 .fa-arrow-down:hover
   transform: translate(0px, 10px)
@@ -387,6 +409,7 @@ input
   .btn-como-funciona
     padding: 2rem
     padding-bottom: 100px
+    top: 425px
 
   .img-right
     z-index: 1
@@ -407,6 +430,10 @@ input
     border-bottom: 1px solid #cbcbcb
     width: 100%
     padding-bottom: 35px
+
+  .btn-circle-small .fa-arrow-down
+    top: 77px
+    left: 77px
 
 @media screen and (min-width: 900px)
   .wrapper-mob
