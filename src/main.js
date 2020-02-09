@@ -52,3 +52,13 @@ $(document).ready(function() {
     }
   });
 });
+
+// circle swiper
+$(".three").on({
+  mousemove: function(e) {
+    $(".drag-indicator").css({
+      left: e.pageX,
+      top: e.pageY
+    });
+  }
+});
