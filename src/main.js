@@ -1,10 +1,19 @@
 import movingTxt from "./movingTxt";
 import AOS from "aos";
 import mySwiper from "./mySwiper";
+import menuMob from "./menuMob";
 
+// menu mob
+menuMob();
+
+// aos
 AOS.init();
-movingTxt();
+
+// swiper carousel
 mySwiper;
+
+// move from right to left
+movingTxt();
 
 // move from left to right
 $(".marquee").marquee({
@@ -18,4 +27,24 @@ $(".marquee").marquee({
   direction: "right",
   //true or false - should the marquee be duplicated to show an effect of continues flow
   duplicated: true
+});
+
+// animated img
+$(document).ready(function() {
+  var animated = false; //added variable to control the animation
+  $(window).scroll(function() {
+    var wS = $(this).scrollTop();
+    if (animated && wS <= 740) {
+      $(".img-two").animate({
+        "top": 0
+      }, 500);
+      animated = false; //animation ended
+    }
+    if (!animated && wS > 841) {
+      $(".img-two").animate({
+        "top": $(".img-right").width() - 550
+      }, 500);
+      animated = true; //it was animated
+    }
+  });
 });

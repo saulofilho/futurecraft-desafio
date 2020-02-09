@@ -7,7 +7,7 @@ const movingTxt = () => {
     movLeft.i = 0;
     movLeft.step = 4;
     movLeft.width = (movLeft.clientWidth + 1);
-    movLeft.innerHTML = `${movLeft.innerHTML}`.repeat(100);
+    movLeft.innerHTML = `${movLeft.innerHTML}`.repeat(10);
     //movLeft.addEventListener("mouseenter", () => movLeft.step = 0, false);
     //movLeft.addEventListener("mouseleave", () => movLeft.step = 4, false);
     movLeft.addEventListener("mouseenter", () => movLeft.style.webkitTextStroke = "3px #2d3d7d");
@@ -31,7 +31,7 @@ const movingTxt = () => {
     movLeftT.i = 0;
     movLeftT.step = 4;
     movLeftT.width = (movLeftT.clientWidth + 1);
-    movLeftT.innerHTML = `${movLeftT.innerHTML}`.repeat(100);
+    movLeftT.innerHTML = `${movLeftT.innerHTML}&nbsp;`.repeat(10);
   });
 
   setInterval(move, 50);

@@ -21,14 +21,53 @@ html
   color: white
   float: left
 
-.row
-  display: flex
-  justify-content: center
-
+/* header */
 .wrapper
   height: 80px
   background-color: #000
   display: block
+
+.wrapper-mob
+  height: auto
+  background-color: black
+
+.top-menu-mob
+  display: flex
+  justify-content: space-between
+  overflow: hidden
+
+.btn-menu
+  cursor: pointer
+
+.fa-bars
+  color: white
+  padding: 2rem 1rem 0
+  font-size: 24px
+
+.search-mob
+  margin-bottom: 10px
+
+.menu-mob
+  display: none
+
+.menu-mob-show
+  display: grid
+  text-align: center
+
+.menu-mob-show a
+  font-size: 14px
+  padding: 10px
+  color: #fff
+  text-decoration: none
+  text-transform: uppercase
+
+.menu-mob-show a:hover
+  color: gray
+  cursor: pointer
+
+.logo-mob img
+  width: 100%
+  max-width: 100px
 
 header
   background-color: #000
@@ -137,12 +176,12 @@ input
   position: absolute
   top: 100px
   left: 0
-  width: 98vw
+  width: 100%
   height: 100%
 
 .one-txt p
   font-weight: 600
-  font-size: calc(20vh - 0.9rem)
+  font-size: calc(20vh - 0.1rem)
   white-space: nowrap
   overflow: hidden
   text-transform: uppercase
@@ -163,8 +202,11 @@ input
   padding-top: 250px
   width: 100%
 
+
+.two .container-small
+  display: flex
+
 .wrapper-two
-  display: inherit
   width: 100%
   height: 100%
 
@@ -228,6 +270,7 @@ input
 
 .txt-left
   float: left
+  overflow: hidden
 
 .txt-left .title
   text-transform: uppercase
@@ -252,9 +295,19 @@ input
   height: 440px
   overflow: hidden
   float: right
+  position: relative
+  top: 0
 
-.img-right img
-  width: 100%
+.img-two
+  background-image: url(https://adidas-desafio.s3-sa-east-1.amazonaws.com/2.jpg)
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  position: absolute
 
 /* section three */
 .three
@@ -324,3 +377,37 @@ input
   overflow: hidden
   padding-top: 100px
   background-color: #f3f1f1
+
+/* mobile */
+@media screen and (max-width: 900px)
+  .wrapper
+    display: none
+
+  .txt-left,
+  .btn-como-funciona
+    padding: 2rem
+    padding-bottom: 100px
+
+  .img-right
+    z-index: 1
+    margin-right: 5%
+
+  .two
+    height: 900px
+
+  .txt-left .title
+    font-size: 24px
+    line-height: 30px
+
+  .txt-left .txt
+    font-size: 12px
+    line-height: 15px
+    color: #747474
+    margin-top: 20px
+    border-bottom: 1px solid #cbcbcb
+    width: 100%
+    padding-bottom: 35px
+
+@media screen and (min-width: 900px)
+  .wrapper-mob
+    display: none
